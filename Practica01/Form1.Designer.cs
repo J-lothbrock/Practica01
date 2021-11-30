@@ -75,8 +75,9 @@ namespace Practica01
             // nueToolStripMenuItem
             // 
             this.nueToolStripMenuItem.Name = "nueToolStripMenuItem";
-            this.nueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nueToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.nueToolStripMenuItem.Text = "Nuevo";
+            this.nueToolStripMenuItem.Click += new System.EventHandler(this.nueToolStripMenuItem_Click);
             // 
             // abrirToolStripMenuItem
             // 
@@ -100,8 +101,9 @@ namespace Practica01
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -112,7 +114,7 @@ namespace Practica01
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "NOTE";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

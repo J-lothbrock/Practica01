@@ -23,6 +23,8 @@ namespace Practica01
         {
             OpenFileDialog OpenFile = new OpenFileDialog();
 
+            OpenFile.Filter = "Archivo de texto(*.txt)|*txt";
+
             if (OpenFile.ShowDialog() == DialogResult.OK)
             {
                 archivo = OpenFile.FileName;
@@ -38,6 +40,8 @@ namespace Practica01
         {
             SaveFileDialog SaveFile = new SaveFileDialog();
 
+            SaveFile.Filter = "Archivo de texto(*.txt)|*txt";
+
             if (archivo != null)
             {
                 using (StreamWriter sw = new StreamWriter(archivo))
@@ -52,10 +56,23 @@ namespace Practica01
                     archivo = SaveFile.FileName;
                     using (StreamWriter sw = new StreamWriter(SaveFile.FileName))
                     {
-                        sw.Write(richTextBox1.Text);
+                        sw.Write(richTextBox1.Text); 
                     }
                 }
             }
+        }
+
+        private void nueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Form2 f2 = new Form2();
+            f2.Show();
         }
     }
 }
